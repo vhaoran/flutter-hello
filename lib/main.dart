@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello/prefrence_demo/prefrencePage.dart';
+import 'package:hello/refreshindicator/refreshIndicator_demo.dart';
+import 'package:hello/snackbars/snackBar2.dart';
+import 'package:hello/snackbars/snackbar_demo.dart';
 import 'package:hello/sqDemo/sqlDemo.dart';
 import 'package:hello/t02-state-demo.dart';
 import 'package:hello/t03-aligin-padding.dart';
@@ -7,11 +10,19 @@ import 'package:hello/t05-card-demo.dart';
 import 'package:hello/t06-drawer.dart';
 import 'package:hello/t11-scafold-demo.dart';
 import 'package:hello/t99-thirdPage.dart';
+import 'package:hello/tab/tab_view/TabViewScreen.dart';
+import 'package:hello/tab/tabcontroller/tab_bottom_demo.dart';
+import 'package:hello/tab/tabcontroller/tab_controller_demo.dart';
 import 'package:hello/tabtest/index_page.dart';
+import 'package:hello/text_style/text_style_demo.dart';
+import 'package:hello/theme/theme_demo.dart';
 import 'package:hello/ws/wsDemo.dart';
 
+import 'animation/animation01.dart';
 import 'b-loginPage.dart';
 import 'httptest/http-demo-page.dart';
+import 'listviews/listviewDemo.dart';
+import 'load_more/load_more_demo.dart';
 import 'loginDemo/login.dart';
 import 'mq/mqView.dart';
 import 't01-buttonDemoPage.dart';
@@ -23,14 +34,14 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  bool _login = false;
+  bool _login = true;
 
   Widget _choice() {
-    if (_login) {
-      return new MyHomePage(title: 'Flutter Demo Home Page');
-    }
+    //if (_login) {
+    return new MyHomePage(title: 'Flutter Demo Home Page');
+    //}
 
-    return new LoginPageTest();
+    //return new LoginPageTest();
   }
 
   @override
@@ -43,20 +54,7 @@ class MyApp extends StatelessWidget {
       home: _choice(),
       //initialRoute: '/',
       routes: {
-        'ScaffoldDemo': (BuildContext context) => new ScaffoldDemo(),
         'WsDemoPage': (BuildContext context) => new WsDemoPage(),
-        'MqView': (BuildContext context) => new MqView(),
-        'SqPage': (BuildContext context) => new SqPage(),
-        'StoreDemoPage': (BuildContext context) => new StoreDemoPage(),
-        'home': (BuildContext context) => new MyHomePage(),
-        'HttpDemoPage': (BuildContext context) => new HttpDemoPage(),
-        'IndexPage': (BuildContext context) => new IndexPage(),
-        'DrawerDemoPage': (BuildContext context) => new DrawerDemoPage(),
-        'CardDemoPage': (BuildContext context) => new CardDemoPage(),
-        'LayOutDemoPage': (BuildContext context) => new LayOutDemoPage(),
-        'icon-demo': (BuildContext context) => new IconDemoPage(),
-        'login-page': (BuildContext context) => new LoginPage(),
-        'btn-demo': (context) => new ButtonDemoPage(),
       },
     );
   }
@@ -78,106 +76,47 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text("演示跳转"),
       ),
       body: new Center(
-        child: new ListView(
+        child: new GridView.count(
+          crossAxisSpacing: 4.0,
+          //垂直子Widget之间间距
+          mainAxisSpacing: 4.0,
+          //GridView内边距
+          padding: EdgeInsets.all(4.0),
+          //一行的Widget数量
+          crossAxisCount: 2,
+          //子Widget宽高比例
+          childAspectRatio: 4.0,
+
           children: <Widget>[
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "ScaffoldDemo");
-                },
-                child: new Text("ScaffoldDemo")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "WsDemoPage");
-                },
-                child: new Text("WsDemoPage")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "MqView");
-                },
-                child: new Text("MqView")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "SqPage");
-                },
-                child: new Text("SqPage")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "StoreDemoPage");
-                },
-                child: new Text("StoreDemoPage")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "HttpDemoPage");
-                },
-                child: new Text("HttpDemoPage")),
-
-            //------------------------------------------------
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "IndexPage");
-                },
-                child: new Text("IndexPage")),
-            //------------------------------------------------
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "DrawerDemoPage");
-                },
-                child: new Text("DrawerDemoPage")),
-
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "CardDemoPage");
-                },
-                child: new Text("CardDemoPage")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "LayOutDemoPage");
-                },
-                child: new Text("LayOutDemoPage")),
-
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "login-page");
-                },
-                child: new Text("login-page")),
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "btn-demo");
-                },
-                child: new Text("btn-demo")),
-
-            new FlatButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "icon-demo");
-                },
-                child: new Text("icon-demo")),
-
-            //------------------------------------------------
-            new FlatButton(
-                onPressed: () {
-                  //Navigator.pushNamed<String>(context, "page3");
-                  Navigator.push<String>(context,
-                      new MaterialPageRoute(builder: (BuildContext context) {
-                    return new StateDemoPage();
-                  }));
-                },
-                child: new Text("state-demo")),
-            new FlatButton(
-                onPressed: () {
-                  //Navigator.pushNamed<String>(context, "page3");
-                  Navigator.push<String>(context,
-                      new MaterialPageRoute(builder: (BuildContext context) {
-                    return new SecondPage();
-                  }));
-                },
-                child: new Text("page2-call")),
-
-            new FlatButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => SecondPage()));
-                },
-                child: new Text("page2-call-2")),
+            //whr
+            btn("SnackBarDemoPage", new SnackBarDemoPage(), context),
+            btn("TabBarDemo", new TabBarDemo(), context),
+            btn("BottomTabBarPage", new BottomTabBarPage(), context),
+            btn("TabViewScreen", new TabViewScreen(), context),
+            btn("TextStylePage", new TextStylePage(), context),
+            btn("ThemeDemo", new ThemeDemo(), context),
+            btn("RefreshIndicatorDemo", new RefreshIndicatorDemo(), context),
+            btn("LoadMorePage", new LoadMorePage(), context),
+            btn("Animation01", new Animation01(), context),
+            btn("ListViewPage", new ListViewPage(), context),
+            btn("SnackBarPage", new SnackBarPage(), context),
+            btn("ScaffoldDemo", new ScaffoldDemo(), context),
+            btn("WsDemoPage", new WsDemoPage(), context),
+            btn("MqView", new MqView(), context),
+            btn("SqPage", new SqPage(), context),
+            btn("StoreDemoPage", new StoreDemoPage(), context),
+            btn("HttpDemoPage", new HttpDemoPage(), context),
+            btn("IndexPage", new IndexPage(), context),
+            btn("DrawerDemoPage", new DrawerDemoPage(), context),
+            btn("CardDemoPage", new CardDemoPage(), context),
+            btn("LayOutDemoPage", new LayOutDemoPage(), context),
+            btn("LayOutDemoPage", new LayOutDemoPage(), context),
+            btn("LayOutDemoPage", new LoginPage(), context),
+            btn("LayOutDemoPage", new LoginPage(), context),
+            btn("ButtonDemoPage", new ButtonDemoPage(), context),
+            btn("IconDemoPage", new IconDemoPage(), context),
+            btn("StateDemoPage", new StateDemoPage(), context),
+            btn("SecondPage", new SecondPage(), context),
             new FlatButton(
                 onPressed: () {
                   Navigator.push<String>(context,
@@ -199,4 +138,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+RaisedButton btn(String text, Widget page, BuildContext ctx) {
+  return new RaisedButton(
+      onPressed: () {
+        toPage(ctx, page);
+      },
+      child: new Text(text));
+}
+
+toPage(BuildContext ctx, Widget page) {
+  Navigator.push<String>(ctx,
+      new MaterialPageRoute(builder: (BuildContext context) {
+    return page;
+  }));
 }
