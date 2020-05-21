@@ -1,0 +1,10 @@
+.
+..
+a.txt
+.gitignore
+lib
+pubspec.lock
+pubspec.yaml
+README.md
+rmt.sh
+test
