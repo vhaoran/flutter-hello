@@ -13,6 +13,7 @@ import 'package:hello/t99-thirdPage.dart';
 import 'package:hello/tab/tab_view/TabViewScreen.dart';
 import 'package:hello/tab/tabcontroller/tab_bottom_demo.dart';
 import 'package:hello/tab/tabcontroller/tab_controller_demo.dart';
+import 'package:hello/tabbar2/tabbar2.dart';
 import 'package:hello/tabtest/index_page.dart';
 import 'package:hello/text_style/text_style_demo.dart';
 import 'package:hello/theme/theme_demo.dart';
@@ -20,10 +21,12 @@ import 'package:hello/ws/wsDemo.dart';
 
 import 'animation/animation01.dart';
 import 'b-loginPage.dart';
+import 'expandtitle/expandsiontitleSample.dart';
 import 'httptest/http-demo-page.dart';
 import 'listviews/listviewDemo.dart';
 import 'load_more/load_more_demo.dart';
 import 'loginDemo/login.dart';
+import 'menus/appbarMenu.dart';
 import 'mq/mqView.dart';
 import 't01-buttonDemoPage.dart';
 import 't04-icon-demo.dart';
@@ -89,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("TabbedAppBarSample", new TabbedAppBarSample(), context),
+            btn("ExpansionTileSample", new ExpansionTileSample(), context),
+            btn("BasicAppBarSample", new BasicAppBarSample(), context),
             btn("SnackBarDemoPage", new SnackBarDemoPage(), context),
             btn("TabBarDemo", new TabBarDemo(), context),
             btn("BottomTabBarPage", new BottomTabBarPage(), context),

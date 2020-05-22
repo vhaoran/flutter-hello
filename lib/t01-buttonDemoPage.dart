@@ -17,6 +17,11 @@ class ButtonDemoPage extends StatelessWidget {
         ),
         body: new Column(
           children: [
+
+            new InkWell(
+              child:new Text("test image line")
+            ),
+
             new FlatButton(
                 onPressed: () {
                   Navigator.pop(context);
