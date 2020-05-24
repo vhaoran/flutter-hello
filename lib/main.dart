@@ -20,6 +20,7 @@ import 'package:hello/theme/theme_demo.dart';
 import 'package:hello/ws/wsDemo.dart';
 
 import 'animation/animation01.dart';
+import 'asmart/WidgetVisible.dart';
 import 'b-loginPage.dart';
 import 'expandtitle/expandsiontitleSample.dart';
 import 'httptest/http-demo-page.dart';
@@ -92,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("WidgetVisible", new WidgetVisible(), context),
             btn("TabbedAppBarSample", new TabbedAppBarSample(), context),
             btn("ExpansionTileSample", new ExpansionTileSample(), context),
             btn("BasicAppBarSample", new BasicAppBarSample(), context),
