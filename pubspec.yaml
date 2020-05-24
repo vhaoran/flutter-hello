@@ -38,7 +38,12 @@ dependencies:
   event_bus: ^1.1.0
   #
   websocket_manager: ^0.2.2
-
+  #
+  flutter_easyrefresh: ^2.1.1
+  #
+  pull_to_refresh: ^1.5.7
+  # ok
+  liquid_pull_to_refresh: ^2.0.0
 
 dev_dependencies:
   flutter_test:
