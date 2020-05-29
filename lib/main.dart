@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello/prefrence_demo/prefrencePage.dart';
 import 'package:hello/refreshindicator/refreshIndicator_demo.dart';
+import 'package:hello/searchDemo/searchDemo1.dart';
 import 'package:hello/snackbars/snackBar2.dart';
 import 'package:hello/snackbars/snackbar_demo.dart';
 import 'package:hello/sqDemo/sqlDemo.dart';
@@ -22,8 +23,15 @@ import 'package:hello/ws/wsDemo.dart';
 import 'animation/animation01.dart';
 import 'asmart/WidgetVisible.dart';
 import 'b-loginPage.dart';
+import 'barcode2d/barcode2dDemo.dart';
 import 'expandtitle/expandsiontitleSample.dart';
 import 'httptest/http-demo-page.dart';
+import 'imagedemo/iconStack.dart';
+import 'imgcrop/imageViewPage.dart';
+import 'imgcrop/imageViewPage2.dart';
+import 'imgcrop/CropImgPage.dart';
+import 'imgcrop/imageViewPage3.dart';
+import 'imgcrop/imageViewPage4.dart';
 import 'listviews/listviewDemo.dart';
 import 'load_more/load_more_demo.dart';
 import 'loginDemo/login.dart';
@@ -93,6 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("SearchPage", new SearchPage(), context),
+            btn("ImageSizePage", new ImageSizePage(), context),
+            btn("Barcode2DPagePage", new Barcode2DPagePage(), context),
+            btn("ImageViewPage4", new ImageViewPage4(), context),
+            btn("ImageViewPage3", new ImageViewPage3(), context),
+            btn("ImageViewPage2", new ImageViewPage2(), context),
+            btn("ImgViewPage", new ImgViewPage(), context),
+            btn("CropImgPage", new CropImgPage(), context),
             btn("WidgetVisible", new WidgetVisible(), context),
             btn("TabbedAppBarSample", new TabbedAppBarSample(), context),
             btn("ExpansionTileSample", new ExpansionTileSample(), context),
