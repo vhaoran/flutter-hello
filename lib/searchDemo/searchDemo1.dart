@@ -23,15 +23,21 @@ class _ctlState extends State<_ctl> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return new Scaffold(
+      body: ctl(),
+    );
+  }
+
+  Widget ctl() {
+    return new Column(
       children: [
-        new Column(children: [
-          new TextField(
-            maxLines: 1,
-            maxLength: 10,
-            style: new TextStyle(
-              fontSize: 20,
-            ),
+        new SizedBox(
+          child: new TextField(
+//            maxLines: 1,
+//            maxLength: 10,
+//            style: new TextStyle(
+//              fontSize: 20,
+//            ),
             onChanged: (e) {
               _text = e;
               _result.clear();
@@ -43,10 +49,10 @@ class _ctlState extends State<_ctl> {
               });
             },
           ),
-        ]),
+        ),
         new Expanded(
           child: ListView(
-            children: _l.map((e) => _line(e)).toList(),
+            children: _result.map((e) => _line(e)).toList(),
           ),
         ),
       ],

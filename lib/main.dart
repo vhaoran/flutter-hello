@@ -24,6 +24,7 @@ import 'animation/animation01.dart';
 import 'asmart/WidgetVisible.dart';
 import 'b-loginPage.dart';
 import 'barcode2d/barcode2dDemo.dart';
+import 'checkbox.dart';
 import 'expandtitle/expandsiontitleSample.dart';
 import 'httptest/http-demo-page.dart';
 import 'imagedemo/iconStack.dart';
@@ -101,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("CheckBoxDemoPage", new CheckBoxDemoPage(), context),
             btn("SearchPage", new SearchPage(), context),
             btn("ImageSizePage", new ImageSizePage(), context),
             btn("Barcode2DPagePage", new Barcode2DPagePage(), context),
