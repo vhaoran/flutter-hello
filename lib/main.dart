@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello/prefrence_demo/prefrencePage.dart';
 import 'package:hello/refreshindicator/refreshIndicator_demo.dart';
+import 'package:hello/searchDemo/expandDemo2.dart';
 import 'package:hello/searchDemo/searchDemo1.dart';
 import 'package:hello/snackbars/snackBar2.dart';
 import 'package:hello/snackbars/snackbar_demo.dart';
@@ -102,6 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("ExpandDemoPage2", new ExpandDemoPage2(), context),
             btn("CheckBoxDemoPage", new CheckBoxDemoPage(), context),
             btn("SearchPage", new SearchPage(), context),
             btn("ImageSizePage", new ImageSizePage(), context),
