@@ -26,6 +26,8 @@ import 'asmart/WidgetVisible.dart';
 import 'b-loginPage.dart';
 import 'barcode2d/barcode2dDemo.dart';
 import 'checkbox.dart';
+import 'components/components-demo.dart';
+import 'components/searchbars/searchbarDemo.dart';
 import 'expandtitle/expandsiontitleSample.dart';
 import 'httptest/http-demo-page.dart';
 import 'imagedemo/iconStack.dart';
@@ -103,6 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("SearchBarDemo", new SearchBarDemo(), context),
+            btn("ComDemo", new ComDemo(), context),
             btn("ExpandDemoPage2", new ExpandDemoPage2(), context),
             btn("CheckBoxDemoPage", new CheckBoxDemoPage(), context),
             btn("SearchPage", new SearchPage(), context),
