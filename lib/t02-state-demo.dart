@@ -29,9 +29,11 @@ class _CounterState extends State<Counter> {
   int _counter = 0;
 
   void _increment() {
-    setState(() {
-      _counter++;
-    });
+    _counter++;
+
+    print("$_counter ${this._counter}");
+
+    setState(() {});
   }
 
   @override

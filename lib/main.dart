@@ -19,8 +19,10 @@ import 'package:hello/tabbar2/tabbar2.dart';
 import 'package:hello/tabtest/index_page.dart';
 import 'package:hello/text_style/text_style_demo.dart';
 import 'package:hello/theme/theme_demo.dart';
+import 'package:hello/webview/webviewDemo.dart';
 import 'package:hello/ws/wsDemo.dart';
 
+import 'alipay/alipayDemo.dart';
 import 'animation/animation01.dart';
 import 'asmart/WidgetVisible.dart';
 import 'b-loginPage.dart';
@@ -36,6 +38,8 @@ import 'imgcrop/imageViewPage2.dart';
 import 'imgcrop/CropImgPage.dart';
 import 'imgcrop/imageViewPage3.dart';
 import 'imgcrop/imageViewPage4.dart';
+import 'imgcrop/imageViewPage5.dart';
+import 'imgcrop/imageViewPage6.dart';
 import 'listviews/listviewDemo.dart';
 import 'load_more/load_more_demo.dart';
 import 'loginDemo/login.dart';
@@ -105,6 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("WebViewDemo", new WebViewDemo(), context),
+            btn("AliPayDemo", new AliPayDemo(), context),
+            btn("ImageCrop2", new ImageCrop2(), context),
+            btn("ImageCropDemo", new ImageCropDemo(), context),
             btn("SearchBarDemo", new SearchBarDemo(), context),
             btn("ComDemo", new ComDemo(), context),
             btn("ExpandDemoPage2", new ExpandDemoPage2(), context),
@@ -112,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
             btn("SearchPage", new SearchPage(), context),
             btn("ImageSizePage", new ImageSizePage(), context),
             btn("Barcode2DPagePage", new Barcode2DPagePage(), context),
-            btn("ImageViewPage4", new ImageViewPage4(), context),
+            //btn("ImageViewPage4", new ImageViewPage444(), context),
             btn("ImageViewPage3", new ImageViewPage3(), context),
             btn("ImageViewPage2", new ImageViewPage2(), context),
             btn("ImgViewPage", new ImgViewPage(), context),

@@ -644,6 +644,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "tobias",
+      "rootUri": "file:///usr/local/flutter/.pub-cache/hosted/pub.flutter-io.cn/tobias-1.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "typed_data",
       "rootUri": "file:///usr/local/flutter/.pub-cache/hosted/pub.flutter-io.cn/typed_data-1.1.6",
       "packageUri": "lib/",
@@ -686,6 +692,12 @@
       "languageVersion": "2.1"
     },
     {
+      "name": "webview_flutter",
+      "rootUri": "file:///usr/local/flutter/.pub-cache/hosted/pub.flutter-io.cn/webview_flutter-0.3.22+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///usr/local/flutter/.pub-cache/hosted/pub.flutter-io.cn/xml-3.6.1",
       "packageUri": "lib/",
@@ -704,7 +716,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-05-27T09:26:38.654369Z",
+  "generated": "2020-06-27T03:39:33.177837Z",
   "generator": "pub",
   "generatorVersion": "2.8.2"
 }

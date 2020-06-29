@@ -51,8 +51,8 @@ dependencies:
   # 2d barcode
   ai_barcode: ^1.0.3
   # 2dbarcode
-  qr_flutter: ^3.1.0
-
+  # ok
+  crop: ^0.3.1+1
 
 
 dev_dependencies:
@@ -68,7 +68,11 @@ dev_dependencies:
   crop: ^0.3.1+1
   image_selector: ^0.1.0
   extended_image: ^0.8.0
-
+  image: ^2.1.12
+  # ali apy
+  tobias: ^1.6.1
+  # webview
+  webview_flutter: ^0.3.22+1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
