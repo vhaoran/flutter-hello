@@ -6,6 +6,7 @@ import 'package:hello/searchDemo/searchDemo1.dart';
 import 'package:hello/snackbars/snackBar2.dart';
 import 'package:hello/snackbars/snackbar_demo.dart';
 import 'package:hello/sqDemo/sqlDemo.dart';
+import 'package:hello/stackDemo/stackDemo1.dart';
 import 'package:hello/t02-state-demo.dart';
 import 'package:hello/t03-aligin-padding.dart';
 import 'package:hello/t05-card-demo.dart';
@@ -109,6 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           children: <Widget>[
             //whr
+            btn("StackDemo1Page", new StackDemo1Page(), context),
             btn("WebViewDemo", new WebViewDemo(), context),
             btn("AliPayDemo", new AliPayDemo(), context),
             btn("ImageCrop2", new ImageCrop2(), context),
